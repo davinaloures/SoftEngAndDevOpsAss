@@ -1,6 +1,7 @@
 import django
 import os
-os.environ['DJANGO_SETTINGS_MODULE'] = 'engagement_webapp.settings'
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'engagement_webapp.settings')
+#os.environ['DJANGO_SETTINGS_MODULE'] = 'engagement_webapp.settings'
 django.setup()
 from django.contrib.auth.models import User
 from django.test import TestCase
