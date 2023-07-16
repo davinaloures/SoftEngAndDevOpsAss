@@ -1,5 +1,10 @@
+import django
+import os
+
 from django.contrib.auth.models import User
 from django.test import TestCase
+os.environ['DJANGO_SETTINGS_MODULE'] = 'engagement_webapp.settings'
+django.setup()
 
 class LogInTest(TestCase):
     def setUp(self):
