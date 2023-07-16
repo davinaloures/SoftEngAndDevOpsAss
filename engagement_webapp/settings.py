@@ -33,6 +33,7 @@ DEBUG = True
 INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'requests.apps.RequestsConfig',
+    'engagement_webapp',
     'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -124,9 +125,9 @@ USE_TZ = True
 
 STATIC_ROOT= os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (
- os.path.join(BASE_DIR, 'static'),
-)
+'''STATICFILES_DIRS = (
+ os.path.join(BASE_DIR, 'staticfiles'),
+)'''
 
 MEDIA_ROOT= os.path.join(BASE_DIR, 'media')
 MEDIA_URL='/media/'
