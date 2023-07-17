@@ -30,9 +30,10 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
         python3.10 -m pip install users
         python3.10 -m pip install requests
+        python3.10 -m pip install requests.templates.requests
         python3.10 -m pip install views
         python3.10 -m pip install models
-        python3.10 -m pip install requests.templates.requests
+        
      
     - name: Lint with flake8
       run: |
