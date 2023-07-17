@@ -3,7 +3,7 @@ from django.urls import reverse
 import users
 import requests
 import engagement_webapp
-import base
+
 
 packages= ['users', 'requests', 'engagement_webapp']
 class TestSetUp(TestCase):
