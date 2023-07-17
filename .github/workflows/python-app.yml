@@ -30,6 +30,8 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
         python -m pip install users
         python -m pip install requests
+        python -m pip install users.views
+        python -m pip install requests.models
      
     - name: Lint with flake8
       run: |
