@@ -31,6 +31,7 @@ jobs:
         python3.10 -m pip install users
         python3.10 -m pip install requests
         python3.10 -m pip install views
+        python3.10 -m pip install models
         
      
     - name: Lint with flake8
