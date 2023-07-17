@@ -32,7 +32,7 @@ jobs:
         python3.10 -m pip install requests
         python3.10 -m pip install views
         python3.10 -m pip install models
-        
+        python3.10 -m pip install requests.templates.requests
      
     - name: Lint with flake8
       run: |
