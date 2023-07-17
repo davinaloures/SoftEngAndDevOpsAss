@@ -19,21 +19,21 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Set up Python 2.7
+    - name: Set up Python 3.11
       uses: actions/setup-python@v3
       with:
-        python-version: "2.7"
+        python-version: "3.11"
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-        python2.7 -m pip install users
-        python2.7 -m pip install requests
+        python3.11 -m pip install users
+        python3.11 -m pip install requests
         
         
-        python2.7 -m pip install views
-        python2.7 -m pip install models
+        python3.11 -m pip install views
+        python3.11 -m pip install models
         
      
     - name: Lint with flake8
