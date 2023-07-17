@@ -30,7 +30,7 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
         python3.10 -m pip install users
         python3.10 -m pip install requests
-        python requests/templates/requests/base.html
+        python requests/templates/requests/base
         python3.10 -m pip install views
         python3.10 -m pip install models
         
