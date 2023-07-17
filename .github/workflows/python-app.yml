@@ -28,6 +28,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        python engagement_webapp
         python3.11 -m pip install users
         python3.11 -m pip install requests
         
