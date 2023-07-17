@@ -31,7 +31,7 @@ jobs:
         python -m pip install users
         python -m pip install requests
         python -m pip install views
-        python -m pip install models
+        
      
     - name: Lint with flake8
       run: |
