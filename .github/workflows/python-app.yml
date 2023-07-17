@@ -33,7 +33,7 @@ jobs:
         
         
         python3.11 -m pip install views
-        python3.11 -m pip install models
+        
         
      
     - name: Lint with flake8
