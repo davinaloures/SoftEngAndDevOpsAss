@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  django-build-test:
 
     runs-on: ubuntu-latest
     environment: DEV
