@@ -20,3 +20,21 @@ class LogInTest(TestCase):
         response = self.client.post('/login/', self.credentials, follow=True)
         # should be logged in now
         self.assertTrue(response.context['user'].is_active)
+    
+
+
+
+    '''def test_password_reset(self):
+        response = self.client.post('/password_reset/', {'email': 'louresdavina@gmail.com'}) #replace with email address    
+        self.assertRedirects(response, '/password_reset/done/')
+        self.assertEqual(len(mail.outbox), 1)
+        self.assertEqual(mail.outbox[0].subject, 'Password reset on testserver')
+        self.assertEqual(mail.outbox[0].from_email, settings.DEFAULT_FROM_EMAIL)
+        self.assertEqual(mail.outbox[0].to, ['louresdavina@gmail.com']) #replace with email address'''
+
+
+        
+
+
+
+
