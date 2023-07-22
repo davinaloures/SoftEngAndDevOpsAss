@@ -56,7 +56,7 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
       - uses: azure/CLI@v1
         with:
-          azcliversion: 2.0.72
+          azcliversion: 2.30.0
           inlineScript: |
             az account list
 
