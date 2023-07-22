@@ -37,7 +37,7 @@ jobs:
 
   containerapp-build-and-deploy:
     runs-on: ubuntu-latest
-    environment: PROD
+
     needs: django-build-test
 
     steps:
