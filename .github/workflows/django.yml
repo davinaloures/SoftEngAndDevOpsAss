@@ -51,12 +51,11 @@ jobs:
           echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO main" | sudo tee /etc/apt/sources.list.d/azure-cli.list
           sudo apt-get update
           sudo apt-get install azure-cli
-      - uses: azure/login@v1.4.3
+      - uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
       - uses: azure/CLI@v1
         with:
-          azcliversion: 2.30.0
           inlineScript: |
             az account list
 
