@@ -61,7 +61,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           push: true
-          tags: ghcr.io/davinaloures/softenganddevopsass:${{ github.sha }}
+          tags: ghcr.io/davinaloures/softenganddevopsass:latest
           file: ./Dockerfile
 
   deploy:
