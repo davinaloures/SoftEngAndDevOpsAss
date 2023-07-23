@@ -1,13 +1,16 @@
 name: Azure Container Apps Deploy
 
 on:
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows: ["Django CI"]
+    branches: [main]
+    types: 
+      - completed
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: PROD
 
     steps:
       - uses: actions/checkout@v3
