@@ -24,9 +24,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'davs123'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-#DEBUG = True
-#ALLOWED_HOSTS = ['ms-employee-engagement-webapp.azurewebsites.net', 'localhost']
+DEBUG = os.getenv('DEBUG', False) == 'True'
+
+ALLOWED_HOSTS = ['ms-employee-engagement-webapp.azurewebsites.net', '127.0.0.1', 'localhost']
 
 
 
