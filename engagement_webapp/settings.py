@@ -24,9 +24,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'davs123'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 #DEBUG = True
-#ALLOWED_HOSTS = ['engagement-request-app.herokuapp.com']
+ALLOWED_HOSTS = ['ms-employee-engagement-webapp.azurewebsites.net']
 
 
 
