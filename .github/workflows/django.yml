@@ -43,14 +43,17 @@ jobs:
         sudo apt-get update
         sudo apt-get install azure-cli
         
-    - uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
+        
     - uses: azure/CLI@v1
       with:
         azcliversion: 2.0.72
         inlineScript: |
           az account list
+        
+    - uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    
 
     - name: Build and deploy Container App
       uses: azure/container-apps-deploy-action@v1
