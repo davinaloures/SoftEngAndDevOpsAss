@@ -9,3 +9,5 @@ urlpatterns = [
     path('post/<int:pk>/update/', PostUpdateView.as_view(), name='post-update'),
     path('about/', views.about, name='requests-about'),
 ]
+
+
