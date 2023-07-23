@@ -11,14 +11,16 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-
-
+      - name: Azure login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Build and deploy Container App
         uses: azure/container-apps-deploy-action@v1
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          
           appSourcePath: ${{ github.workspace }}/src
-          acrName: caba8f538e43acr
-          containerAppName: t-dalourcontainer
-          resourceGroup: t-dalour_rg_0679
+          acrName: caf3d2cc044facr
+          containerAppName: newcontainer
+          resourceGroup: assignment
