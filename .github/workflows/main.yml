@@ -24,3 +24,8 @@ jobs:
           acrName: caf3d2cc044facr
           containerAppName: newcontainer
           resourceGroup: assignment
+          
+      - uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'ms-employee-engagement-webapp'
+          images: 'caf3d2cc044facr.azurecr.io/github-action/container-app:${{ github.sha }}'
