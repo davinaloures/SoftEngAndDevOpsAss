@@ -1,13 +1,16 @@
 name: Azure Container Apps Deploy
 
 on:
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows: ["Django CI"]
+    branches: [main]
+    types: 
+      - completed
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: PROD
 
     steps:
       - uses: actions/checkout@v3
@@ -24,3 +27,8 @@ jobs:
           acrName: caf3d2cc044facr
           containerAppName: newcontainer
           resourceGroup: assignment
+          
+      - uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'ms-employee-engagement-webapp'
+          images: 'caf3d2cc044facr.azurecr.io/github-action/container-app:${{ github.sha }}'
