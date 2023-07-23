@@ -20,7 +20,7 @@ jobs:
         uses: azure/container-apps-deploy-action@v1
         with:
           
-          appSourcePath: ${{ github.workspace }}/src
+          appSourcePath: ${{ github.workspace }}
           acrName: caf3d2cc044facr
           containerAppName: newcontainer
           resourceGroup: assignment
