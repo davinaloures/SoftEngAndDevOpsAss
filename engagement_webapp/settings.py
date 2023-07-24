@@ -26,7 +26,7 @@ SECRET_KEY = 'davs123'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', False) == 'True'
 
-ALLOWED_HOSTS = ['ms-employee-engagement-webapp.azurewebsites.net', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['51.104.28.76','ms-employee-engagement-webapp.azurewebsites.net', '127.0.0.1', 'localhost']
 
 
 
