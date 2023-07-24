@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'storages',
-    'crispy_bootstrap4'
+    'crispy_bootstrap4',
+    'axes'
 ]
 
 MIDDLEWARE = [
@@ -52,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'axes.middleware.AxesMiddleware'
 ]
 
 ROOT_URLCONF = 'engagement_webapp.urls'
@@ -104,9 +106,19 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = [
+    # AxesStandaloneBackend should be the first backend in the AUTHENTICATION_BACKENDS list.
+    'axes.backends.AxesStandaloneBackend',
+
+    # Django ModelBackend is the default authentication backend.
+    'django.contrib.auth.backends.ModelBackend',
+]
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
+
+AXES_COOLOFF_TIME = 2
+AXES_ENABLE_ACCESS_FAILURE_LOG = True
 
 LANGUAGE_CODE = 'en-us'
 
@@ -122,7 +134,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-#STATIC_ROOT= os.path.join(BASE_DIR, 'static')
+STATIC_ROOT= os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 '''STATICFILES_DIRS = (
  os.path.join(BASE_DIR, 'staticfiles'),
